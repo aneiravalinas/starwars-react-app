@@ -4,10 +4,6 @@ import { Film } from '../entity/Film';
 export function CharacterCard( props: { character: Character } ) {
     const { character } = props;
 
-    if ( !character ) {
-        return null;
-    }
-
     return (
         <div className='card'>
             <div className='card-inner'>
@@ -36,10 +32,10 @@ export function CharacterCard( props: { character: Character } ) {
                     <p className='title'>films</p>
                     { character.films.map((film: Film) => {
                     return (
-                        <div className='card-content-row'>
-                        <span className='card-content-film-name'>{ `${film.name}` }</span>
-                        <span className='card-content-film-date'>{ `(${film.release_date})` }</span>
-                    </div>
+                        <div className='card-content-row' key={ film.name }>
+                            <span className='card-content-film-name'>{ `${film.name}` }</span>
+                            <span className='card-content-film-date'>{ `(${film.release_date})` }</span>
+                        </div>
                     );
                     })}
                 </div>

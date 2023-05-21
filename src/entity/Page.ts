@@ -1,6 +1,6 @@
 export interface Page<T> {
     count: number;
-    previous: number;
-    next: number;
+    previous: number | null;
+    next: number | null;
     results: T[];
 }

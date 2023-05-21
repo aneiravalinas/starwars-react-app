@@ -5,6 +5,7 @@ import { NavigationPage } from "../components/NavigationPageComponent";
 import { SearchBar } from "../components/SearchBarComponent";
 import { Spinner } from "../components/SpinnerComponent";
 import { Character } from '../entity/Character';
+import { ErrorResponse } from "../entity/ErrorResponse";
 import { Page } from "../entity/Page";
 
 
@@ -24,12 +25,9 @@ export function CharList() {
     const fetchCharacterPage = (name: string, numberPage: number): void => {
         setLoading(true);
         CharacterApiService.retrieveCharacterPage(name, numberPage)
-            .then((page: Page<Character>) => {
-                setPage(page)
-                setLoading(false);
-            })
-            .catch(err => console.log('Error retrieving page:\n' + JSON.stringify(err, null, 2)));
-        
+            .then((page: Page<Character>) => setPage(page))
+            .catch((err: ErrorResponse) => setPage({ count: 0, previous: null, next: null, results: [] }))
+            .finally(() => setLoading(false));       
     }
 
     const onSearchValueSubmit = (newSearchValue: string): void => {
@@ -45,14 +43,14 @@ export function CharList() {
     }
 
     return (
-        <div style={{ position: 'relative', top: 0, bottom: 0, right: 0, left: 0 }}>
+        <div style={{ position: 'relative', top: 0, bottom: 0, right: 0, left: 0}}>
             <Spinner onLoad={ loading } />
             {  page &&
                 (<section className='char-section'>
                     <SearchBar initialSearchValue={ searchValue } 
                         onSubmit={ onSearchValueSubmit } />
                     <div className='cards-container'>
-                    { page.results.map((character: Character) => <CharacterCard character={ character } /> ) }
+                    { page.results.map((character: Character) => <CharacterCard key={ character.name } character={ character } /> ) }
                     </div>
                     <NavigationPage 
                         previous={ page.previous } 
