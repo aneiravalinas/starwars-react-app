@@ -44,7 +44,7 @@ export function CharList() {
     }
 
     return (
-        <div style={{ position: 'relative', top: 0, bottom: 0, right: 0, left: 0}}>
+        <div className='char-container'>
             <Spinner onLoad={ loading } />
             {  page &&
                 (<section className='char-section'>

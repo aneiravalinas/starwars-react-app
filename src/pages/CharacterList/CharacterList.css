@@ -1,3 +1,11 @@
+.char-container {
+    position: relative; 
+    top: 0;
+    bottom: 0; 
+    right: 0; 
+    left: 0;
+}
+
 .char-section {
     position: relative;
     display: flex;
@@ -8,7 +16,7 @@
     gap: 5rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    height: 100%;
+    min-height: 100vh;
 }
 
 .char-section:before {
