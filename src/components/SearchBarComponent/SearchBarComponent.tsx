@@ -1,4 +1,5 @@
 import './SearchBarComponent.css';
+import searchIcon from '../../static/icons/search.png';
 import { useRef, useState } from 'react';
 
 type SearchProps<T extends (string | number)> = {
@@ -26,7 +27,7 @@ export function SearchBar<T extends (string | number)>(props: SearchProps<T>) {
             onKeyDown={ (e) => (e.key === 'Enter' ? handleSubmit() : null )} />
             <button type='submit'
                 onClick={ () => handleSubmit() }>
-                <img src='icons/search.png' alt='search'/>
+                <img src={ searchIcon } alt='search'/>
             </button>
         </div>
     );

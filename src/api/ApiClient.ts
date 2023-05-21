@@ -1,8 +1,9 @@
 import axios, { AxiosInstance } from 'axios';
+import { API_URL } from '../config/Constants';
 
 
 export const apiClient: AxiosInstance = axios.create({
-    baseURL: 'http://localhost:8080/swapi-proxy',
+    baseURL: `${ API_URL }/swapi-proxy`,
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

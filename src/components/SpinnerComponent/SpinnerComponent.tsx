@@ -1,4 +1,5 @@
 import './SpinnerComponent.css';
+import spinnerIcon from '../../static/icons/spinner.png';
 
 export function Spinner(props: { onLoad: boolean }) {
     
@@ -9,7 +10,7 @@ export function Spinner(props: { onLoad: boolean }) {
     return (
         <div className='spinner-container'>
             <div className='spinner'>
-                <img className='spinner-logo' src='icons/spinner.png' alt='spinner' />
+                <img className='spinner-logo' src={ spinnerIcon } alt='spinner' />
                 <p className='spinner-text'>loading</p>
             </div>
         </div>
