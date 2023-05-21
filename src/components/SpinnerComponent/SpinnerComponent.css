@@ -1,0 +1,44 @@
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(33, 33, 33, .9);
+}
+
+.spinner {
+    position: relative;
+    top: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-logo {
+    width: 25rem;
+    height: 25rem;
+    animation: rotationBack 1s ease-in-out infinite reverse;
+}
+
+.spinner-text {
+    font-family: 'Starjhol';
+    font-size: 2em;
+    color: yellow;
+}
+
+@keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(-360deg);
+    }
+}

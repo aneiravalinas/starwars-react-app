@@ -1,12 +1,13 @@
+import './CharacterList.css';
 import { useEffect, useState } from "react";
-import { CharacterApiService } from "../api/CharacterApiService";
-import { CharacterCard } from "../components/CharacterCadComponent";
-import { NavigationPage } from "../components/NavigationPageComponent";
-import { SearchBar } from "../components/SearchBarComponent";
-import { Spinner } from "../components/SpinnerComponent";
-import { Character } from '../entity/Character';
-import { ErrorResponse } from "../entity/ErrorResponse";
-import { Page } from "../entity/Page";
+import { CharacterApiService } from "../../api/CharacterApiService";
+import { CharacterCard } from "../../components/CharacterCardComponent/CharacterCardComponent";
+import { NavigationPage } from "../../components/NavigationPageComponent/NavigationPageComponent";
+import { SearchBar } from "../../components/SearchBarComponent/SearchBarComponent";
+import { Spinner } from "../../components/SpinnerComponent/SpinnerComponent";
+import { Character } from '../../entity/Character';
+import { ErrorResponse } from "../../entity/ErrorResponse";
+import { Page } from "../../entity/Page";
 
 
 

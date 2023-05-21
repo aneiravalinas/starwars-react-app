@@ -1,3 +1,5 @@
+import './NavigationPageComponent.css';
+
 type NavigationPageProps = {
     previous: (number | null);
     next: (number | null);

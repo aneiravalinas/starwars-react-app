@@ -1,3 +1,4 @@
+import './SearchBarComponent.css';
 import { useRef, useState } from 'react';
 
 type SearchProps<T extends (string | number)> = {

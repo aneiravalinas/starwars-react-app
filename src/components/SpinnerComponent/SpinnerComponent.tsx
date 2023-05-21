@@ -1,3 +1,4 @@
+import './SpinnerComponent.css';
 
 export function Spinner(props: { onLoad: boolean }) {
     

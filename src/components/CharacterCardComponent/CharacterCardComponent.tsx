@@ -1,5 +1,6 @@
-import { Character } from '../entity/Character';
-import { Film } from '../entity/Film';
+import './CharacterCardComponent.css';
+import { Character } from '../../entity/Character';
+import { Film } from '../../entity/Film';
 
 export function CharacterCard( props: { character: Character } ) {
     const { character } = props;

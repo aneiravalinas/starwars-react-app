@@ -1,0 +1,26 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    border-width: 1px;
+    padding: 1rem 0 1rem 0;
+    perspective: 1000px;
+    width: 100%;
+}
+
+.search-container input {
+    width: min(45rem, 80%);
+    font-family: 'Starjedi';
+    font-size: 1.8rem;
+    border-radius: 5px;
+    border: solid;
+    border-color: gray;
+    color: #fff;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: #212121;
+}
+
+.search-container input:focus {
+    outline: none !important;
+    border-color: #3B3E37;
+    box-shadow: 0 0 10px #3B3E37;
+}
