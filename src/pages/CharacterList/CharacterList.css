@@ -1,0 +1,49 @@
+.char-container {
+    position: relative; 
+    top: 0;
+    bottom: 0; 
+    right: 0; 
+    left: 0;
+}
+
+.char-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../../static/image/dv.jpeg');
+    background-size: cover;
+    gap: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+}
+
+.char-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(33, 33, 33, 0.9);
+}
+
+.cards-container {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem 3rem;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    width: 5rem;
+    height: 5rem;
+}

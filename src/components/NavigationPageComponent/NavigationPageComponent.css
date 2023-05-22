@@ -1,0 +1,16 @@
+.navigation-container {
+    display: flex;
+    justify-content: space-evenly;
+    perspective: 1000px;
+    width: 50%;
+    padding-bottom: 5rem;
+}
+
+.arrow-previous, .arrow-next {
+    width: 6rem;
+    height: 6rem;
+}
+
+.arrow-next {
+    rotate: 180deg;
+}

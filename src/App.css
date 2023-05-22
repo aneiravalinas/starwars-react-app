@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+header h1 {
+    margin: 1.5rem;
+    font-family: 'Starjhol';
+    font-size: 6rem;
+    text-align: center;
+    word-break: break-word;
+    color: yellow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (max-width: 2120px) {
+    .char-section {
+        height: auto;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 514px) {
+    html {
+        font-size: 50.5%;
+    }
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: 'Starjedi';
+    src: url('./static/fonts/Starjedi.ttf');
+}
+  
+@font-face {
+    font-family: 'Starjhol';
+    src: url('./static/fonts/Starjhol.ttf');
 }
